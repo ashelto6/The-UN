@@ -1,0 +1,121 @@
+2020-05-28 20:38:32,601 ERROR: Exception on / [GET] [in c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ajshe\Desktop\microblog\app\routes.py", line 44, in index
+    return render_template("index.html", title=_("Home Page"), form=form, posts=posts.items, next_url=next_url, prev_url=prev_url) #render_template renders code in html. #colored 'posts' contains all the user's posts, 'posts' can be accessed by 'index.html' to print data to the page usually using the "." operator
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\ajshe\Desktop\microblog\app\templates\index.html", line 3, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\ajshe\Desktop\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Users\ajshe\Desktop\microblog\app\templates\base.html", line 55, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\Users\ajshe\Desktop\microblog\app\templates\index.html", line 16, in block "app_content"
+    {% include 'post.html' %}
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: post.html
+2020-05-28 20:39:16,848 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:56]
+2020-05-28 20:40:02,753 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:65]
+2020-05-28 20:57:08,279 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:63]
+2020-05-28 21:06:32,020 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:63]
+2020-05-28 23:16:55,244 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:75]
+2020-05-28 23:28:30,609 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:75]
+2020-05-28 23:28:33,977 ERROR: Exception on /login [GET] [in c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2242, in preprocess_request
+    rv = func()
+  File "C:\Users\ajshe\Desktop\microblog\app\main\routes.py", line 17, in before_request
+    g.locale = str(get_locale())
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 251, in get_locale
+    rv = babel.locale_selector_func()
+  File "C:\Users\ajshe\Desktop\microblog\app\__init__.py", line 92, in get_locale
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+NameError: name 'app' is not defined
+2020-05-28 23:31:19,241 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:75]
+2020-05-28 23:31:21,682 ERROR: Exception on /reset_password_request [GET] [in c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2242, in preprocess_request
+    rv = func()
+  File "C:\Users\ajshe\Desktop\microblog\app\main\routes.py", line 17, in before_request
+    g.locale = str(get_locale())
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 251, in get_locale
+    rv = babel.locale_selector_func()
+  File "C:\Users\ajshe\Desktop\microblog\app\__init__.py", line 92, in get_locale
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+NameError: name 'app' is not defined
+2020-05-28 23:42:40,918 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:75]
+2020-05-28 23:42:42,311 ERROR: Exception on /reset_password_request [GET] [in c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2242, in preprocess_request
+    rv = func()
+  File "C:\Users\ajshe\Desktop\microblog\app\main\routes.py", line 17, in before_request
+    g.locale = str(get_locale())
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask_babel\__init__.py", line 251, in get_locale
+    rv = babel.locale_selector_func()
+  File "C:\Users\ajshe\Desktop\microblog\app\__init__.py", line 92, in get_locale
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+NameError: name 'app' is not defined
+2020-05-28 23:43:16,443 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:75]
