@@ -1,0 +1,75 @@
+2020-05-23 06:58:18,532 ERROR: Exception on /reset_password_request [POST] [in c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\ajshe\Desktop\microblog\app\routes.py", line 167, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\ajshe\Desktop\microblog\app\email.py", line 14, in send_password_reset_email
+    send_email('[Microblog] Reset Your Password', sender=app.config['ADMINS'][0],
+  File "C:\Users\ajshe\Desktop\microblog\app\email.py", line 10, in send_email
+    mail.send(msg)
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask_mail.py", line 158, in configure_host
+    host = smtplib.SMTP(self.mail.server, self.mail.port)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.752.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 253, in __init__
+    (code, msg) = self.connect(host, port)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.752.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 339, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.752.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 308, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.752.0_x64__qbz5n2kfra8p0\lib\socket.py", line 787, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.752.0_x64__qbz5n2kfra8p0\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+2020-05-23 07:07:33,441 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:44]
+2020-05-23 07:07:44,807 ERROR: Exception on /reset_password_request [POST] [in c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\ajshe\Desktop\microblog\app\routes.py", line 103, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\ajshe\Desktop\microblog\app\email.py", line 19, in send_password_reset_email
+    send_email('[Microblog] Reset Your Password', sender=app.config['ADMINS'][0],
+  File "C:\Users\ajshe\Desktop\microblog\app\email.py", line 15, in send_email
+    Thread(target=send_async_email, args=(app,msg)).start()
+NameError: name 'send_async_email' is not defined
+2020-05-23 07:18:32,363 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:45]
+2020-05-23 07:20:22,982 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:45]
+2020-05-23 07:22:11,929 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:45]
+2020-05-23 07:25:19,475 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:45]
+2020-05-23 07:31:03,613 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:45]
+2020-05-23 07:32:04,454 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:45]
+2020-05-23 07:35:20,198 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:45]
+2020-05-23 07:37:18,933 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:45]
+2020-05-23 07:52:58,736 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:45]
+2020-05-23 07:53:47,702 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:45]
+2020-05-23 07:54:03,540 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:45]
+2020-05-23 07:54:41,013 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:45]
+2020-05-23 07:55:24,259 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:45]
+2020-05-23 07:55:43,393 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:45]
+2020-05-28 20:37:50,212 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:56]
+2020-05-28 20:38:29,414 INFO: Microblog Startup [in C:\Users\ajshe\Desktop\microblog\app\__init__.py:56]

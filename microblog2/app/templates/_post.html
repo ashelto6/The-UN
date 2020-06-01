@@ -1,0 +1,27 @@
+<!-- sub-template used to display user avatar next to their posts (distinguished by '_' prefix in file name) -->
+
+<!--we get the 'post' variable from the for loop in 'user.html' that creates it, 'author' is set to the instance variable 'user' in the 'user view function' in the 'posts' dictionary, so that means 'author' contains all of the user's data such as username, about_me, and avatar() and more which can be accessed using the "." operator as done below -->
+  {% if post.author %}
+  {% set admin_username = 'Tony' %}
+<table class="table table-hover">
+ <tr>
+  <td width="70px">
+  <a href="{{ url_for('main.user', username=post.author.username) }}">
+    <img src="{{ post.author.avatar(70) }}" />
+   </a>
+   {% if post.author.username == admin_username %}
+   <p style="text-align: center; color:mediumblue; font-size: small;">Admin</p>{% endif %}
+  </td>
+  <td>
+   <a style="color: firebrick;" href="{{ url_for('main.user', username=post.author.username) }}">
+    {{ post.author.username }}
+   </a>
+
+   <br>
+    {{ moment(post.timestamp).calendar() }}   {{_('said')}}:<br>
+   <br>
+    {{ post.body }}
+   {% endif %}
+  </td>
+ </tr>
+</table>

@@ -1,0 +1,25 @@
+{% extends "base.html"%}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block app_content %}
+<h1>{{ _('Edit Your Profile') }}</h1>
+<br> <br>
+<div class="row">
+ <div class="col-md-4">
+  {{ wtf.quick_form(form) }}
+  <br>
+  <p> <a style="color: firebrick;"
+    href="{{ url_for('main.user', username=current_user.username) }}"><small>{{ _("back to 'Profile'") }}</small></a></p>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr>
+    <p>
+    <form action="{{ url_for('main.close_account', username=current_user.username) }}" method="post">
+     {{ CAform.hidden_tag() }}
+     {{ CAform.submit(value= _('Close Account'), class_='btn btn-default') }} 
+    </form>
+    </p>
+ </div>
+</div>
+<br>
+<br>
+
+{% endblock %}
+
