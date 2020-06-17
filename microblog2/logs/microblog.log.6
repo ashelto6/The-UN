@@ -1,0 +1,118 @@
+2020-06-06 02:22:04,437 ERROR: Exception on /user/Tony [GET] [in c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ajshe\microblog2\app\main\routes.py", line 86, in user
+    return render_template('user.html', user=user, posts=posts.items, next_url=next_url, prev_url=prev_url, form=form) #colored 'user' contains all the user's data and colored 'posts' contains all the user's posts. Both 'user' and 'posts' can be accessed by 'user.html' to print data to the page usually using the "." operator
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\ajshe\microblog2\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\ajshe\microblog2\app\templates\base.html", line 66, in template
+    {%%}
+jinja2.exceptions.TemplateSyntaxError: tag name expected
+2020-06-06 02:22:29,181 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 02:23:05,930 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 02:23:58,634 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 02:30:48,334 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 02:33:53,253 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 02:35:10,514 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 02:41:57,182 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 02:47:02,255 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 02:47:52,234 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 02:47:56,585 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 02:49:09,675 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:04:19,657 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:05:59,557 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:08:26,944 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:11:49,714 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:16:01,700 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:16:39,202 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:19:30,498 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:20:05,202 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:20:34,714 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:28:31,594 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:29:13,811 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:29:35,184 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:30:26,493 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:31:02,486 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:32:13,988 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:32:33,547 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:35:30,299 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:35:34,074 ERROR: Exception on /user/Tony [GET] [in c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ajshe\microblog2\app\main\routes.py", line 86, in user
+    return render_template('user.html', user=user, posts=posts.items, next_url=next_url, prev_url=prev_url, form=form) #colored 'user' contains all the user's data and colored 'posts' contains all the user's posts. Both 'user' and 'posts' can be accessed by 'user.html' to print data to the page usually using the "." operator
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\ajshe\microblog2\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\ajshe\microblog2\app\templates\base.html", line 53, in template
+    <li><a  href="{{ url_for('auth.login' }}"><button style="color: rgb(178, 34, 34);"
+jinja2.exceptions.TemplateSyntaxError: unexpected '}', expected ')'
+2020-06-06 03:35:53,246 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:37:03,290 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:40:29,490 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:41:14,534 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:42:15,071 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:42:52,030 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:43:35,457 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:43:50,755 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:44:30,097 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:48:03,215 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:49:23,780 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:50:09,301 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:51:34,181 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 03:58:24,431 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 04:00:23,676 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-06 04:01:33,017 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]

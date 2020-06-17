@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+<ol style="background-color: white;" class="breadcrumb">
+ <li><a href="{{ url_for('auth.login') }}">{{ _('Sign In') }}</a></li>
+ <li class="active">{{ _('Register') }}</li>
+</ol>
+<h1>{{ _('Register') }}</h1><br><br>
+<div class="row">
+ <div class="col-md-4">
+  {{ wtf.quick_form(form) }}
+ </div>
+</div>
+<br>
+<br>
+<p> <a style="color: rgb(178, 34, 34);"
+  href="{{ url_for('auth.login') }}"><small>{{ _("back to 'Sign In'") }}</small></a></p>
+{% endblock %}

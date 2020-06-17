@@ -1,0 +1,52 @@
+{% set admin_username = 'tony' %}
+<table class="table">
+  <tr>
+    <td width="64" style="border: 0px;"><img src="{{ user.avatar(64) }}"></td>
+    <td style="border: 0px;">
+
+      {% if user.username == admin_username %}
+      <p style="color: rgb(178, 34, 34); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        <a style="color: firebrick;" href="{{ url_for('main.user', username=user.username) }}">
+          <b>{{ user.username.upper() }}</a><b style="font-size: x-small; color: mediumblue;">{{ _('(ADMIN)') }}</b></b>
+      </p>
+
+      {% else %}
+
+      <p style="color: rgb(178, 34, 34); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        <a style="color: firebrick;" href="{{ url_for('main.user', username=user.username) }}">
+          <b>{{ user.username.upper() }}</b></a>
+      </p>
+      {% endif %}
+
+      <small>
+        {% if user.about_me %}<p><b>{{ user.about_me }}</b></p>{% endif %}
+
+        {% if user.last_seen %}<p style="color: forestgreen;"><u>{{ _('Last Active') }}</u>:
+          {{ _('%(when)s', when=moment(user.last_seen).fromNow()) }}</p>{% endif %}
+
+        <p>{{ user.followers.count() }} <b>{{ _('Followers') }}</b> <big>|</big>
+          {{ user.followed.count() }}
+          <b>{{ _('Following') }}</b>
+        </p>
+
+        {% if user == current_user %}
+        <p><a style="color: rgb(178, 34, 34); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+            href="{{ url_for('main.edit_profile') }}">{{ _('Update your profile') }}</a></p>
+
+        {% elif not current_user.is_following(user) %}
+
+        <a href="{{ url_for('main.follow', username=user.username) }}">
+          {{ _('Follow') }}
+        </a>
+
+        {% else %}
+
+        <a href="{{ url_for('main.unfollow', username=user.username) }}">
+          {{ _('Unfollow') }}
+        </a>
+        {% endif %}
+
+      </small>
+    </td>
+  </tr>
+</table>

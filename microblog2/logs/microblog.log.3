@@ -1,0 +1,96 @@
+2020-06-08 17:59:33,623 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 17:59:53,306 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 18:00:19,768 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 18:07:07,739 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 18:10:14,932 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 18:11:34,603 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 18:13:05,183 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 18:13:24,952 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 18:17:25,872 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 18:19:48,519 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 18:21:01,650 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 18:24:47,259 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 18:26:11,269 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 18:27:45,170 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 18:27:48,941 ERROR: Exception on /all_users [GET] [in c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ajshe\microblog2\app\main\routes.py", line 43, in all_users
+    return render_template('all_users.html', title = _('All Users'), form=form, users=users.items, next_url=next_url, prev_url=prev_url)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\ajshe\microblog2\app\templates\all_users.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\ajshe\microblog2\app\templates\base.html", line 2, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Users\ajshe\microblog2\app\templates\base.html", line 71, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\Users\ajshe\microblog2\app\templates\all_users.html", line 35, in block "app_content"
+    <form action="{{ url_for('main.ULfollow', username=user.username) }}" method="post">
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.ULfollow' with values ['username']. Did you mean 'main.follow' instead?
+2020-06-08 18:28:13,233 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 18:32:20,940 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 18:45:51,893 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 18:46:06,591 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 23:45:53,236 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 23:47:24,473 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-08 23:48:18,842 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 00:08:28,397 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 00:09:34,567 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 00:43:04,880 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 02:41:59,880 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 02:44:30,487 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 03:38:46,351 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 03:42:56,649 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 03:46:00,081 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 03:48:36,858 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 03:56:42,425 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 04:02:00,728 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 04:02:37,844 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 04:06:33,179 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 04:07:43,129 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 04:09:53,814 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 04:10:26,261 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 04:10:37,067 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-09 04:11:59,670 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-11 16:01:45,214 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-13 22:07:31,926 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
