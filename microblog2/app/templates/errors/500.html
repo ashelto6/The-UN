@@ -1,7 +1,0 @@
-{% extends "base.html" %}
-
-{% block app_content %}
-<h1>{{ _("Uh Oh! An unexpected error has found it's way into the session") }}</h1>
-<h3>{{ _('Fear not! The admin has been notified. We apologize for the inconvenience!') }}</h3>
-<p><a href="{{ url_for('main.index') }}">{{ _('back to Home') }}</a></p>
-{% endblock %}
