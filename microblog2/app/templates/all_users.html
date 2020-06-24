@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<ol style="background-color: white;" class="breadcrumb">
+  <li><a href="{{ url_for('main.index') }}">{{ _('Home') }}</a></li>
+  <li class="active">{{ _('Users') }}</li>
+</ol>
+
+<h4 style="color: rgb(178, 34, 34); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+  <b><u><big>{{ _('All Users') }}</big></u></b></h4>
+<p style="color: grey; text-align: right;">{{ _("sorted by: Most Recently Active") }}</p>
+{% for user in users %}
+<!-- this is the post variable used in _post.html-->
+{% if user %}
+{% set admin_username = 'tony' %}
+<table class="table table-hover">
+  <tr>
+    <td width="70px">
+      <br>
+      <a href="{{ url_for('main.user', username=user.username) }}">
+        <img style="border-radius: 50%;" src="{{ user.avatar(70) }}" />
+      </a>
+      {% if user.username == admin_username %}
+      <p style="text-align: center; color:mediumblue; font-size: small;">{{ _('Admin') }}</p>{% endif %}
+    </td>
+    <td>
+      <br><br>
+      <span class="user_popup">
+        <a style="color: rgb(178, 34, 34);"
+          href="{{ url_for('main.user', username=user.username) }}"><b><big>{{ user.username.title() }}</big></b></a></span>
+      {% if user == current_user %}
+      {% elif not current_user.is_following(user) %}
+      {% else %}
+      <p style="color: gray;"><i>
+          [You follow this user]</i>
+      </p>
+      {% endif %}
+    </td>
+  </tr>
+  </td>
+  </tr>
+</table>
+{% endif %}
+{% endfor %}
+{% if users %}
+<nav aria-label="...">
+  <ul class="pager">
+    <li class="previous{% if not prev_url %} disabled{% endif %}">
+      <a href="{{ prev_url or '#' }}">
+        <span aria-hidden="true">&larr;</span> {{ _('Next page') }}
+      </a>
+    </li>
+    <li class="next{% if not next_url %} disabled{% endif %}">
+      <a href="{{ next_url or '#' }}">
+        {{ _('Previous page') }} <span aria-hidden="true">&rarr;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+{% else %}
+<br><br><br><br>
+<p style="text-align: center; color:dimgrey ;">{{ _('No users are signed up') }}</p>
+{% endif %}
+{% endblock %}

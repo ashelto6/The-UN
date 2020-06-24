@@ -1,0 +1,137 @@
+2020-06-23 05:42:09,384 ERROR: Exception on /search [GET] [in c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 730, in comparator
+    comparator_factory = self.type.comparator_factory
+AttributeError: 'NoneType' object has no attribute 'comparator_factory'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ajshe\microblog2\app\main\routes.py", line 35, in search
+    users, utotal = User.search(g.search_form.q.data.lower(), page, current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\ajshe\microblog2\app\models.py", line 22, in search
+    return cls.query.filter(cls.id.in_(ids)).order_by(
+  File "<string>", line 2, in order_by
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\orm\base.py", line 227, in generate
+    fn(self, *args[1:], **kw)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\orm\query.py", line 1920, in order_by
+    criterion = self._adapt_col_list(criterion)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\orm\query.py", line 338, in _adapt_col_list
+    return [
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\orm\query.py", line 340, in <listcomp>
+    expression._literal_as_label_reference(o), True, True
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 4644, in _literal_as_label_reference
+    elif hasattr(element, "__clause_element__"):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 744, in __getattr__
+    return getattr(self.comparator, key)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 883, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 732, in comparator
+    util.raise_(
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
+    raise exception
+TypeError: Object None associated with '.type' attribute is not a TypeEngine class or object
+2020-06-23 05:43:45,849 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 05:43:48,419 ERROR: Exception on /search [GET] [in c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 730, in comparator
+    comparator_factory = self.type.comparator_factory
+AttributeError: 'NoneType' object has no attribute 'comparator_factory'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ajshe\microblog2\app\main\routes.py", line 39, in search
+    users, utotal = User.search(g.search_form.q.data.lower(), page, current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\ajshe\microblog2\app\models.py", line 22, in search
+    return cls.query.filter(cls.id.in_(ids)).order_by(
+  File "<string>", line 2, in order_by
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\orm\base.py", line 227, in generate
+    fn(self, *args[1:], **kw)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\orm\query.py", line 1920, in order_by
+    criterion = self._adapt_col_list(criterion)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\orm\query.py", line 338, in _adapt_col_list
+    return [
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\orm\query.py", line 340, in <listcomp>
+    expression._literal_as_label_reference(o), True, True
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 4644, in _literal_as_label_reference
+    elif hasattr(element, "__clause_element__"):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 744, in __getattr__
+    return getattr(self.comparator, key)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 883, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 732, in comparator
+    util.raise_(
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
+    raise exception
+TypeError: Object None associated with '.type' attribute is not a TypeEngine class or object
+2020-06-23 05:53:26,332 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 05:53:29,550 ERROR: Exception on /search [GET] [in c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ajshe\microblog2\app\main\routes.py", line 42, in search
+    return render_template('search.html', title =_('Search'), search = g.search_form.q.data, total=total, posts=posts, users = users, next_url=next_url, prev_url=prev_url, DPForm=DPForm, UDForm=UDForm)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\ajshe\microblog2\app\templates\search.html", line 9, in template
+    {% if total != 0 or users is not None %}
+jinja2.exceptions.TemplateAssertionError: no test named 'None'
+2020-06-23 05:54:26,477 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 05:55:14,806 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 06:00:54,908 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 06:05:44,698 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]

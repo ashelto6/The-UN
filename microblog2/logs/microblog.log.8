@@ -1,0 +1,127 @@
+2020-06-21 04:09:03,165 ERROR: Exception on /send_message/tony [GET] [in c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ajshe\microblog2\app\main\routes.py", line 232, in send_message
+    return render_template('send_message.html', title=_('Send Message'), form=form, recipient=recipient)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\ajshe\microblog2\app\templates\send_message.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\ajshe\microblog2\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Users\ajshe\microblog2\app\templates\base.html", line 81, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\Users\ajshe\microblog2\app\templates\send_message.html", line 6, in block "app_content"
+    src="{{ user.avatar(40) }}"></span> {{ _('Message to %(recipient)s', recipient=recipient.title()) }}</h1>
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'user' is undefined
+2020-06-21 04:10:05,735 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 04:12:24,759 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 04:13:15,834 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 04:13:49,516 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 04:18:44,839 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 04:23:20,632 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 04:25:50,191 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 04:26:35,075 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 04:40:03,864 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 04:40:06,077 ERROR: Exception on /send_message/pawn [GET] [in c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ajshe\microblog2\app\main\routes.py", line 232, in send_message
+    return render_template('send_message.html', title=_('Send Message'), form=form, recipient=recipient, user=user)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\ajshe\microblog2\app\templates\send_message.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\ajshe\microblog2\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 26, in block "body"
+    {% block scripts %}
+  File "C:\Users\ajshe\microblog2\app\templates\base.html", line 147, in block "scripts"
+    $.ajax('{{ url_for('
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint '\n        main.notifications '. Did you mean 'main.notifications' instead?
+2020-06-21 04:41:37,039 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 13:46:40,749 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 14:02:17,692 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 14:20:02,026 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 14:31:50,338 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 23:38:03,499 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 23:39:17,526 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-22 15:55:31,267 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-22 16:44:52,251 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-22 16:45:41,049 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-22 16:46:17,062 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-22 16:51:25,140 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-22 16:52:11,688 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-22 16:57:33,645 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-22 16:59:22,030 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-22 17:03:17,773 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-22 17:39:26,427 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-22 17:42:15,997 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
