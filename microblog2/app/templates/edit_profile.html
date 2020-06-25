@@ -1,0 +1,33 @@
+{% extends "base.html"%}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block app_content %}
+<ol style="background-color: white;" class="breadcrumb">
+  <li><a href="{{ url_for('main.index') }}">{{ _('Home') }}</a></li>
+  <li><a href="{{ url_for('main.user', username=current_user.username) }}">{{ _('Profile') }}</a></li>
+  <li class="active">{{ _('Update Profile') }}</li>
+</ol>
+<h1>{{ _('Update Your Profile') }}</h1>
+<br> <br>
+<div class="row">
+  <div class="col-md-4">
+    {{ wtf.quick_form(form) }}
+    <br>
+    <p> <a style=" color: rgb(178, 34, 34);"
+        href="{{ url_for('main.user', username=current_user.username) }}"><small>{{ _("back to 'Profile'") }}</small></a>
+    </p>
+    <br><br><br><br><br>
+    <p>
+      <form action="{{ url_for('main.close_account', username=current_user.username) }}" method="post">
+        {{ CAform.hidden_tag() }}
+        {{ CAform.submit(value= _('Close Account'), style=" color: rgb(226, 226, 226); background-color: red;", class_='btn btn-default') }}
+        <br>
+      </form>
+      <p style="color: red;"><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> <b>WARNING</b>:
+        This will permanently delete your account.</p>
+    </p>
+  </div>
+</div>
+<br>
+<br>
+
+{% endblock %}
