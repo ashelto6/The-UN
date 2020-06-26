@@ -1,0 +1,107 @@
+2020-06-23 19:40:46,407 ERROR: Exception on /api/users [POST] [in c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\ajshe\microblog2\app\api\users.py", line 46, in create_user
+    user.from_dict(data, new_user=True)
+TypeError: from_dict() got multiple values for argument 'new_user'
+2020-06-23 19:42:08,930 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 19:52:39,450 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 19:53:00,012 ERROR: Exception on /api/users [POST] [in c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\ajshe\microblog2\app\api\users.py", line 50, in create_user
+    msg = Message(author=admin, recipient=user,
+NameError: name 'Message' is not defined
+2020-06-23 19:53:24,644 ERROR: Exception on /api/users [POST] [in c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\ajshe\microblog2\app\api\users.py", line 50, in create_user
+    msg = Message(author=admin, recipient=user,
+NameError: name 'Message' is not defined
+2020-06-23 19:54:17,887 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 19:54:24,586 ERROR: Exception on /api/users [POST] [in c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\ajshe\microblog2\app\api\users.py", line 51, in create_user
+    body=current_app.config['NEW_USER_MESSAGE'])
+NameError: name 'current_app' is not defined
+2020-06-23 19:54:55,159 ERROR: Exception on /api/users [POST] [in c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\ajshe\microblog2\app\api\users.py", line 51, in create_user
+    body=current_app.config['NEW_USER_MESSAGE'])
+NameError: name 'current_app' is not defined
+2020-06-23 19:55:18,390 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 20:06:54,170 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 20:19:48,641 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 20:19:54,513 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 20:35:27,065 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 20:38:16,866 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 20:53:05,288 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 20:53:36,118 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 20:57:41,378 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-23 21:04:29,896 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-24 11:24:42,472 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-24 14:04:11,957 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-24 14:05:42,657 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-24 14:06:02,626 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-24 16:18:26,887 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-24 16:19:51,279 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-24 16:20:05,793 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-25 04:33:04,907 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]
+2020-06-25 17:06:34,948 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:77]

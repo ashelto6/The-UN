@@ -1,0 +1,74 @@
+<table class="table">
+  {% set admin_username = 'tony' %}
+  <tr><br>
+    <td width="64" style="border: 0px;">
+      <br><br>
+      <img style=" border-radius: 50%;" src="{{ user.avatar(64) }}"></td>
+    <td style="border: 0px;">
+
+      {% if user.username == admin_username %}
+      <p style="color: rgb(178, 34, 34);">
+        <a style="color: firebrick;" href="{{ url_for('main.user', username=user.username) }}">
+          <b><big>{{ user.username.title() }}</a><b style="font-size: xx-small; color: mediumblue;"> <span
+            class="glyphicon glyphicon-wrench" aria-hidden="true"></span></b></big></b>
+      </p>
+
+      {% else %}
+
+      <p style="color: rgb(178, 34, 34);">
+        <a style="color: firebrick;" href="{{ url_for('main.user', username=user.username) }}">
+          <big><b>{{ user.username.title() }}</b></big></a>
+      </p>
+      {% endif %}
+
+      <small>
+        {% if user.about_me %}<p><b>{{ user.about_me }}</b></p>{% endif %}
+
+        {% if user.last_seen %}
+        <p style="color: forestgreen;"> <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+          <u>{{ _('Last Active') }}</u>:
+          {{ moment(user.last_seen).fromNow() }}</p>{% endif %}
+        {% if user != current_user %}
+        <p>
+          <a href="{{ url_for('main.send_message', recipient=user.username) }}">
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{ _('Message') }}
+          </a>
+        </p>
+        {% endif %}
+        <p>{{ user.followers.count() }} <b>{{ _('Followers') }}</b> <big>|</big>
+          {{ user.followed.count() }}
+          <b>{{ _('Following') }}</b>
+        </p>
+
+        {% if user == current_user %}
+        <p><a style="color: rgb(178, 34, 34); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+            href="{{ url_for('main.edit_profile') }}">{{ _('Update your profile') }}</a></p>
+
+        {% elif not current_user.is_following(user) %}
+
+        <p>
+          <form action="{{ url_for('main.follow', username=user.username) }}" method="post">
+            {{ form.hidden_tag() }}
+            {{ form.submit(value=_('Follow'), class_='btn btn-default btn-sm', style ="color: white; background-color: rgb(0, 140, 255);") }}
+          </form>
+        </p>
+
+        {% else %}
+
+        <p>
+          <form action="{{ url_for('main.unfollow', username=user.username) }}" method="post">
+            {{ form.hidden_tag() }}
+            {{ form.submit(value=_('Unfollow'), class_='btn btn-default btn-sm', style ="color: white; background-color: rgb(238, 82, 82);") }}
+          </form>
+        </p>
+        {% endif %}
+        {% if user.is_following(current_user) %}
+        <p style="color: gray;"><i>
+            Follows you</i>
+        </p>
+        {% endif %}
+
+      </small>
+    </td>
+  </tr>
+</table>

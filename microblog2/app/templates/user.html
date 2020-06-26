@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% set admin_username = 'tony' %}
+{% block app_content %}
+{% if user.username == current_user.username %}
+<ol style="background-color: white;" class="breadcrumb">
+    <li><a href="{{ url_for('main.index') }}">{{ _('Home') }}</a></li>
+    <li class="active">{{ _('Profile') }}</li>
+</ol>
+{% else %}
+<ol style="background-color: white;" class="breadcrumb">
+    <li><a href="{{ url_for('main.index') }}">{{ _('Home') }}</a></li>
+    <li><a href="{{ url_for('main.all_users') }}">{{ _('Users') }}</a></li>
+    <li class="active">{{ user.username.title() }}'s {{ _('Profile') }}</li>
+</ol>
+{% endif %}
+<table class="table table-hover">
+    <tr>
+        <td width="200px"><br><img style="border-radius: 50%;" src="{{ user.avatar(200) }}">
+        </td>
+        <td>
+            {% if user.username == admin_username %}
+            <h1
+                style="color: rgb(178, 34, 34); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                <b><big>{{ user.username.upper() }}</big><b style="font-size:medium; color: mediumblue;"> <span
+                            class="glyphicon glyphicon-wrench" aria-hidden="true"></span></b></b></h1>
+            {% else %}
+            <h1
+                style="color: rgb(178, 34, 34); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                <b><big>{{ user.username.upper() }}</big></b></h1>
+            {% endif %}
+            {% if user.about_me %}<p><b>{{ user.about_me }}</b></p>{% endif %}
+            {% if user.last_seen %}<p style="color: forestgreen;"><span class="glyphicon glyphicon-time"
+                    aria-hidden="true"></span><span> <u>{{ _('Last Active') }}</u></span>:
+                {{ _('%(when)s', when=moment(user.last_seen).fromNow()) }}</p>{% endif %}
+            {% if user != current_user %}
+            <p>
+                <a href="{{ url_for('main.send_message', recipient=user.username) }}">
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{ _('Message') }}
+                </a>
+            </p>
+            {% else %}
+            <br>
+            {% endif %}
+            <p>{{ user.followers.count() }} <b>{{ _('Followers') }}</b> <big>|</big> {{ user.followed.count() }}
+                <b>{{ _('Following') }}</b></p>
+            {% if user == current_user %}
+            <p><a href="{{ url_for('main.edit_profile') }}"><span style="font-size: large;"
+                        class="glyphicon glyphicon-cog" aria-hidden="true"></span></a></p>
+            {% elif not current_user.is_following(user) %}
+            <p>
+                <form action="{{ url_for('main.follow', username=user.username) }}" method="post">
+                    {{ form.hidden_tag() }}
+                    {{ form.submit(value=_('Follow'), style ="color: white; background-color: rgb(0, 140, 255);",  class_='btn btn-default') }}
+                </form>
+            </p>
+            {% else %}
+            <p>
+                <form action="{{url_for('main.unfollow', username=user.username) }}" method="post">
+                    {{ form.hidden_tag() }}
+                    {{ form.submit(value=_('Unfollow'), style ="color: white; background-color: rgb(238, 82, 82);", class_='btn btn-default') }}
+                </form>
+            </p>
+            {% endif %}
+            {% if user.is_following(current_user) %}
+            <p style="color: gray;"><i>
+                    Follows you</i>
+            </p>
+            {% endif %}
+        </td>
+    </tr>
+
+</table>
+{% for post in posts %}
+<!-- this is the post variable used in _post.html-->
+{% include '_post.html' %}
+<!-- include statement is replaced with _post.html code -->
+{% endfor %}
+{% if posts %}
+<nav aria-label="...">
+    <ul class="pager">
+        <li class="previous{% if not prev_url %} disabled{% endif %}">
+            <a href="{{ prev_url or '#' }}">
+                <span aria-hidden="true">&larr;</span> {{ _('Newer posts') }}
+            </a>
+        </li>
+        <li class="next{% if not next_url %} disabled{% endif %}">
+            <a href="{{ next_url or '#' }}">
+                {{ _('Older posts') }} <span aria-hidden="true">&rarr;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+{% else %}
+<br><br><br><br>
+<p style="text-align: center; color:dimgrey ;">{{ _('No posts to display.') }}</p>
+{% endif %}
+{% endblock %}

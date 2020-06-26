@@ -1,0 +1,89 @@
+2020-06-21 01:25:48,582 ERROR: Exception on /notifications [GET] [in c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ajshe\microblog2\app\main\routes.py", line 256, in notifications
+    notifications = current_user.notifications.filter(Notification.timestamp > since).order_by(Notification.timestamp.asc())
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'notifications'
+2020-06-21 01:25:58,671 ERROR: Exception on /notifications [GET] [in c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ajshe\microblog2\app\main\routes.py", line 256, in notifications
+    notifications = current_user.notifications.filter(Notification.timestamp > since).order_by(Notification.timestamp.asc())
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'notifications'
+2020-06-21 01:26:08,672 ERROR: Exception on /notifications [GET] [in c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\ajshe\microblog2\app\main\routes.py", line 256, in notifications
+    notifications = current_user.notifications.filter(Notification.timestamp > since).order_by(Notification.timestamp.asc())
+  File "c:\users\ajshe\microblog2\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'notifications'
+2020-06-21 01:27:50,646 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 01:27:58,605 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 01:28:04,663 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 01:46:34,769 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 01:50:26,901 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 01:54:20,289 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 01:54:32,032 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 01:54:40,045 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 02:05:59,780 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 03:09:54,382 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 03:11:19,427 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 03:11:36,389 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 03:13:49,988 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 03:14:54,640 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 03:15:18,219 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 03:15:43,164 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 03:16:42,350 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 03:17:02,165 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 03:42:29,645 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 03:45:09,017 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 04:02:57,686 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 04:03:35,658 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 04:04:41,270 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 04:05:26,557 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 04:06:32,549 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]
+2020-06-21 04:09:00,810 INFO: Microblog Startup [in C:\Users\ajshe\microblog2\app\__init__.py:74]

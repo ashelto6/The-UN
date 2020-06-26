@@ -1,0 +1,17 @@
+{% extends "base.html"%}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block app_content %}
+<h1>{{ _('Update Your Post') }}</h1>
+<br> <br>
+<div class="row">
+  <div class="col-md-4">
+    {{ wtf.quick_form(form) }}
+    <br>
+    <p> <a style=" color: rgb(178, 34, 34);"
+        href="{{ url_for('main.index') }}"><small>{{ _("back to 'Home'") }}</small></a>
+    </p>
+  </div>
+</div>
+<br>
+<br>
+{% endblock %}
