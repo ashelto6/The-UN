@@ -31,7 +31,7 @@ httpie==2.2.0
 idna==2.9
 isort==4.3.21
 itsdangerous==1.1.0
-Jinja2==2.11.2
+Jinja2==2.11.3
 kombu==4.6.10
 lazy-object-proxy==1.4.3
 Mako==1.1.2
